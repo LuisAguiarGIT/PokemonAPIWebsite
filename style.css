@@ -1,0 +1,14 @@
+#banner {
+    background-color: #55A3AB;
+}
+
+#pokeImage {
+    height: 25%;
+    width: 25%;
+}
+
+#body {
+    background-color: #A2D7D5;
+    padding: 40px;
+    margin-top: 20px;
+}

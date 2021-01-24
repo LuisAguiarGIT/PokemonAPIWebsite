@@ -12,3 +12,13 @@
     padding: 40px;
     margin-top: 20px;
 }
+
+#wrapper {
+    /* background-color: green; for visualization purposes */
+    text-align: center;
+  }
+
+  #pokeList {
+    /* background-color: red; for visualization purposes */
+    display: inline-block;
+  }

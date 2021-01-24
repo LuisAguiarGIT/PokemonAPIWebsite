@@ -5,9 +5,9 @@ function getPokemon() {
   fetch("https://pokeapi.co/api/v2/generation/1/")
     .then(response => response.json())
       .then(pokemonList => {
-
-        // let cardGroup = document.createElement('div')
-        // cardGroup.classList.add('card-group')
+          
+          let row = document.createElement('div')
+          row.classList.add('row', 'align-items-center', 'justify-content-center')
 
           for (pokemon of pokemonList.pokemon_species) {
             console.log(pokemon)
@@ -20,8 +20,6 @@ function getPokemon() {
 
             // Defining the card image inside the card element
             let pokeImage = document.createElement('img')
-            // pokeImage.classList.add('card-img-top')
-
             pokeImage.src = `https://pokeres.bastionbot.org/images/pokemon/${extractID(pokemon.url)}.png`;
             pokeImage.width = 100;
             pokeImage.height = 100;
@@ -41,8 +39,6 @@ function getPokemon() {
             // Defining the link for the card body
             let a = document.createElement("a")
             a.classList.add('btn', 'btn-primary')
-            // let newPokemon = document.createElement('li') 
-
             a.textContent = capitalizeFirstLetter("More info!")
             a.setAttribute('href', `show.html?id=${extractID(pokemon.url)}`)
 
@@ -50,14 +46,9 @@ function getPokemon() {
             cardBody.appendChild(pokeImage)
             cardBody.appendChild(cardTitle)
             cardBody.appendChild(a)
-            // console.log(pokemon)
-            // newPokemon.appendChild(a)
-            // refList.appendChild(newPokemon)
-            // card.appendChild(cardTitle)
-            
             card.appendChild(cardBody)
-            // cardGroup.appendChild(card)
-            refList.appendChild(card)
+            row.appendChild(card)
+            refList.appendChild(row)
           } 
     });   
 }

@@ -3,8 +3,8 @@
 }
 
 #pokeImage {
-    height: 25%;
-    width: 25%;
+    height: 40px;
+    width: 100px;
 }
 
 #body {
@@ -14,11 +14,10 @@
 }
 
 #wrapper {
-    /* background-color: green; for visualization purposes */
     text-align: center;
-  }
+}
 
-  #pokeList {
-    /* background-color: red; for visualization purposes */
+#pokeList {
+   
     display: inline-block;
-  }
+}
